@@ -7,9 +7,10 @@ import java.util.Set;
 public class Orden {
     private int id;
 
-    // Decisiones de Diseño: Se elige List (ArrayList) para almacenar productos en la orden
-    // porque permite elementos duplicados y su orden no importa para el negocio.
-    // ArrayList ofrece inserciones amortizadas O(1) y recorrido eficiente.
+        // Decisiones de Diseño: Se elige List (ArrayList) para almacenar productos
+    // porque permite elementos duplicados (mismo producto varias veces) y el orden
+    // de inserción no es relevante para el negocio. ArrayList ofrece inserciones
+    // amortizadas O(1) y recorrido secuencial eficiente en memoria contigua.
     private List<Producto> productos;
 
     public Orden(int id) {
